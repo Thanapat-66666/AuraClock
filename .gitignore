@@ -1,0 +1,11 @@
+# platformio
+esp/.pio/
+
+# vscode
+esp/.vscode/
+
+# cache
+*.log
+*.tmp
+.DS_Store
+Thumbs.db

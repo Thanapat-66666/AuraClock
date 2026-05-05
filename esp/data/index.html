@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  />
+  <title>AuraClock Setup</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="bg-blur bg1"></div>
+  <div class="bg-blur bg2"></div>
+  <div class="bg-blur bg3"></div>
+
+  <main class="app">
+
+    <section class="hero">
+      <div class="logo">AuraClock</div>
+      <h1>Connect to Wi-Fi</h1>
+      <p>Choose a network to continue setup</p>
+    </section>
+
+    <!-- saved -->
+    <section class="card">
+      <div class="toolbar">
+        <span>Saved Networks</span>
+        <span id="savedCount">0 saved</span>
+      </div>
+
+      <div id="savedList" class="wifi-list">
+        <div class="loading">
+          No saved networks
+        </div>
+      </div>
+    </section>
+
+    <!-- available -->
+    <section class="card">
+      <div class="toolbar">
+        <span>Available Networks</span>
+        <button id="scanBtn">Scan</button>
+      </div>
+
+      <div id="wifiList" class="wifi-list">
+        <div class="loading">
+          Scanning nearby Wi-Fi...
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- modal -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-card">
+
+      <h3 id="ssidTitle">Wi-Fi</h3>
+
+      <div class="password-wrap">
+        <input
+          id="password"
+          type="password"
+          placeholder="Password"
+          autocomplete="off"
+        />
+
+        <button
+          id="togglePass"
+          class="eye-btn"
+          type="button"
+        >
+          👁
+        </button>
+      </div>
+
+      <button id="connectBtn">
+        Connect
+      </button>
+
+      <button id="cancelBtn" class="ghost">
+        Cancel
+      </button>
+
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
